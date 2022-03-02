@@ -133,7 +133,7 @@ public class homeController {
                     p.setId(rs.getInt("id_usuario"));
                     p.setNombre(rs.getString("nombre"));
                     p.setApellido(rs.getString("apellido"));
-                    p.setId(rs.getInt("edad"));
+                    p.setEdad(rs.getInt("edad"));
                     p.setCorreo(rs.getString("correo"));
                 }
             return p;

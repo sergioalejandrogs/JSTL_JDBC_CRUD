@@ -14,7 +14,7 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class ArticuloBean {
-    private int id_articulo;
+    private int id;
     private String titulo;
     private String descripcion;
     private int precio;
@@ -25,8 +25,8 @@ public class ArticuloBean {
         
     }
     
-    public ArticuloBean(int id_articulo, String titulo, String descripcion, int precio, String foto, int id_usuario){
-        this.id_articulo = id_articulo;
+    public ArticuloBean(String titulo, String descripcion, int precio, String foto, int id_usuario){
+//        this.id_articulo = id_articulo;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.precio = precio;
@@ -34,12 +34,12 @@ public class ArticuloBean {
         this.id_usuario = id_usuario;
     }
     
-    public int getId_articulo() {
-        return id_articulo;
+    public int getId() {
+        return id;
     }
 
-    public void setId_articulo(int id_articulo) {
-        this.id_articulo = id_articulo;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitulo() {

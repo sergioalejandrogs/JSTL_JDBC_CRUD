@@ -124,7 +124,7 @@ public class articleController {
         {
             public ArticuloBean extractData (ResultSet rs) throws SQLException, DataAccessException{
                 if(rs.next()){
-                    a.setId_articulo(rs.getInt("id_articulo"));
+                    a.setId(rs.getInt("id_articulo"));
                     a.setTitulo(rs.getString("titulo"));
                     a.setDescripcion(rs.getString("descripcion"));
                     a.setPrecio(rs.getInt("precio"));
@@ -141,7 +141,7 @@ public class articleController {
         ModelAndView mav = new ModelAndView();
         String sql = "update articulos set titulo = ?, descripcion = ?, precio = ?, foto = ? where id_articulo = ?";
         this.jdbcTemplate.update(
-                sql, a.getTitulo(), a.getDescripcion(), a.getPrecio(), a.getFoto(), a.getId_articulo()
+                sql, a.getTitulo(), a.getDescripcion(), a.getPrecio(), a.getFoto(), a.getId()
         );
         mav.setViewName("redirect:/listarArticulos.htm");
         return mav;
